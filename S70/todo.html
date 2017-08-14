@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var tasks = [];
+        var id = 0;
+
+        var addTask = function(title) {
+            tasks.push({
+                title: title,
+                id: i++,
+                state: "진행"
+            });
+
+            render();
+        };
+
+        var removeTask = function(id) {
+            for (var i = 0; i < tasks.length; i++) {
+                if (tasks[i].id === id) {
+                    tasks.splice(i, 1);
+                }
+            }
+
+            render();
+        };
+
+        var changeState = function(id, state) {
+            for (var i = 0; i < tasks.length; i++) {
+                if (tasks[i].id === id) {
+                    tasks[i].state = state;
+                }
+            }
+        };
+
+        var render = function() {
+            console.log('진행');
+
+            for (var = 0; i < tasks.length; i++) {
+                task = tasks[i];
+                if (tasks[i].state === '진행') {
+                    console.log(task.id + '. ' + tasks.title + '(' + task.state + ')' )
+                }
+            }
+
+            console.log('완료');
+
+            for (var = 0; i < tasks.length; i++) {
+                task = tasks[i];
+                if (tasks[i].state === '진행') {
+                    console.log(task.id + '. ' + tasks.title + '(' + task.state + ')' )
+                }
+            }
+
+            console.log('추가 : addTask(할일 내용)');
+            console.log('삭제 : removeTask(아이디)');
+            console.log('상태 변경 : changeState(아이디, 상태 - 완료 또는 진행)');
+        }
+
+        render();
+    </script>
+</body>
+</html>

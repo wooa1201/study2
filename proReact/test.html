@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let cardsList = [
+      {
+        id: 1,
+        title: 'Read the book',
+        description: 'I should read the whole book',
+        color: '#bd8d31',
+        status: 'in-progress',
+        tasks: [],
+      },
+      {
+        id: 2,
+        title: 'Write some code',
+        description: 'Code along with the samples in the book',
+        color: '#3a7e28',
+        status: 'todo',
+        tasks: [
+          {
+            id: 1,
+            name: 'ContactList Example',
+            done: true,
+          },
+          {
+            id: 2,
+            name: 'Kanban Example',
+            done: false,
+          },
+          {
+            id: 3,
+            name: 'My own experiments',
+            done: false,
+          },
+        ],
+      },
+    ];
+
+    let todo = cardsList.filter((v) => v.status === "todo");
+    console.log(todo);
+    console.dir(todo);
+  </script>
+</body>
+
+</html>

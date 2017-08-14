@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="button">aaa</div>
+  <div id="button2">aaa</div>
+  <script type="text/javascript">
+
+  document.getElementById("button").addEventListener("click", (function() {
+
+    var eventFlag = true;
+
+    return function() {
+      if(eventFlag) {
+        eventFlag = false;
+
+        //작업내용
+        console.log("실행");
+
+        setTimeout(function(){ eventFlag = true }, 5000);
+      } else {
+        console.log("5초동안 못합니다");
+      }
+    }
+  }()));
+
+  document.getElementById("button2").addEventListener("click", (function() {
+    var eventFlag = true;
+    return function() {
+      if(eventFlag) {
+        eventFlag = false;
+
+        //작업내용
+        console.log("실행");
+
+        setTimeout(function(){ eventFlag = true }, 5000);
+      } else {
+        console.log("5초동안 못합니다");
+      }
+    }
+  }()));
+
+  </script>
+</body>
+</html>

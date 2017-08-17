@@ -1,0 +1,22 @@
+{
+  "name": "react-router-tutorial",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "query-string": "^5.0.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.2"
+  },
+  "devDependencies": {
+    "cross": "^1.0.0",
+    "cross-env": "^5.0.5",
+    "react-scripts": "1.0.11"
+  },
+  "scripts": {
+    "start": "cross-env NODE_PATH=src react-scripts start",
+    "build": "cross-env NODE_PATH=src react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
